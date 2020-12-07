@@ -7,7 +7,11 @@ const options = {
     providers: [
         Providers.Google({
             clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            params: {
+                grant_type: "authorization_code",
+                redirect_uri: "https://erealty-nextjs.vercel.app/api/auth/callback/google",
+            },
         })
         // ...add more providers here
     ],
