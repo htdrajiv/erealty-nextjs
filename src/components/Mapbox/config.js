@@ -1,6 +1,6 @@
 import React from 'react';
 
-export let token = process.env.MAPBOX_TOKEN;
+export const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
 
 export let styles = {
     "light": "mapbox://styles/mapbox/light-v9",
