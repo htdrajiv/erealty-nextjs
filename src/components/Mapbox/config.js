@@ -9,3 +9,5 @@ export let styles = {
     "outdoor": "mapbox://styles/mapbox/outdoors-v10",
     "satellite": "mapbox://styles/mapbox/satellite-v9"
 }
+
+export const mapBoxPlacesApiUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/";

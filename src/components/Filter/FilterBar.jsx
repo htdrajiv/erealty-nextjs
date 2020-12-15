@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Slider, { Range } from 'rc-slider';
-import { Button, Dropdown, FormControl, Modal, Form, InputGroup, Spinner } from 'react-bootstrap'
+import { Button, Form, } from 'react-bootstrap'
 
 const FILTER_TYPES = { "PRICE": "PRICE" }
 const FILTER = { [FILTER_TYPES.PRICE]: { minPrice: "", maxPrice: "" } }
@@ -16,7 +15,7 @@ function PriceFilter(props) {
             event.preventDefault();
             event.stopPropagation();
         }
-        this.setValidated(true);
+        setValidated(true);
     };
 
     let setValidated = (flag) => {
@@ -47,7 +46,7 @@ function PriceFilter(props) {
                         placeholder="Min Price"
                         max={FILTER[FILTER_TYPES.PRICE]["maxPrice"]}
                         value={FILTER[FILTER_TYPES.PRICE]["minPrice"]}
-                        onChange={reload.bind(this, 'minPrice')}
+                        onChange={reload.bind('minPrice')}
                     />
                     <Form.Control.Feedback type="invalid">
                         Only Numbers, Less Than Max
@@ -62,7 +61,7 @@ function PriceFilter(props) {
                         placeholder="Max Price"
                         min={FILTER[FILTER_TYPES.PRICE]["minPrice"]}
                         value={FILTER[FILTER_TYPES.PRICE]["maxPrice"]}
-                        onChange={reload.bind(this, 'maxPrice')}
+                        onChange={reload.bind('maxPrice')}
                     />
                     <Form.Control.Feedback type="invalid">
                         Only Numbers, Greater Than Min
@@ -186,21 +185,21 @@ function FilterBar(props) {
         <div className='filter-bar'>
             <ul className="filter-list list-group list-group-horizontal">
                 <li className="filter-list-item">
-                    <button className="btn btn-outline-secondary" onClick={toggleSection.bind(this, 'priceSection')}>
+                    <button className="btn btn-outline-secondary btn-wrap-text" onClick={toggleSection.bind(this, 'priceSection')}>
                         Price
                     </button>
                     {getFilterSection(<PriceFilter />, 'priceSection')}
                 </li>
 
                 <li className="filter-list-item">
-                    <button className="btn btn-outline-secondary" onClick={toggleSection.bind(this, 'typeSection')}>
+                    <button className="btn btn-outline-secondary btn-wrap-text" onClick={toggleSection.bind(this, 'typeSection')}>
                         Property Type
                     </button>
                     {getFilterSection(<TypeFilter />, 'typeSection')}
                 </li>
 
                 <li className="filter-list-item">
-                    <button className="btn btn-outline-secondary" onClick={toggleSection.bind(this, 'moreSection')}>
+                    <button className="btn btn-outline-secondary btn-wrap-text" onClick={toggleSection.bind(this, 'moreSection')}>
                         More Options
                     </button>
                     {getFilterSection(<MoreFilter />, 'moreSection')}

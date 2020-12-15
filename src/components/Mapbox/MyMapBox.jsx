@@ -5,15 +5,15 @@ import ReactMapGL, {
     ScaleControl, FlyToInterpolator
 } from 'react-map-gl';
 const Geocoder = dynamic(() => import('react-map-gl-geocoder'), { ssr: false });
-import { token, styles } from "./config"
+import { token, styles, mapBoxPlacesApiUrl } from "./config"
 import ImageLoader from "../Misc/ImageLoader";
-import $ from 'jquery'
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
+import axios from 'axios';
 
 const mapTypes = {
     satellite: "satellite",
@@ -120,11 +120,10 @@ function MyMapBox(props, query) {
     let getDefaultViewPort = () => {
         const searchText = router.query.searchText
         if (typeof searchText !== 'undefined' && searchText !== null && searchText !== "") {
-            $.ajax({
-                url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + searchText + ".json?access_token=" + token,
-                cache: false,
-                success: function (data) {
-                    let features = data.features[0];
+            axios.get(mapBoxPlacesApiUrl + searchText + ".json?access_token=" + token)
+                .then(function (response) {
+                    // handle success
+                    let features = response.data.features[0];
                     if (typeof features !== 'undefined') {
                         let viewport = {
                             longitude: features["center"][0],
@@ -146,11 +145,14 @@ function MyMapBox(props, query) {
                             autoGeolocateControl: true,
                         })
                     }
-                },
-                error: function (xhr, status, err) {
-                    console.error(props.url, status, err.toString());
-                }
-            });
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.error(props.url, status, error);
+                })
+                .then(function () {
+                    // always executed
+                });
         } else {
             setUserLocation();
         }

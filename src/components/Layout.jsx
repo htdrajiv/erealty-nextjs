@@ -11,6 +11,7 @@ function Layout({ children }) {
             <Head>
                 <title>ERealty</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                {/* <script src="https://kit.fontawesome.com/a076d05399.js" /> */}
             </Head>
             <div className="">
                 <ToastContainer position={toast.POSITION.TOP_RIGHT} style={{ zIndex: 150000 }} />

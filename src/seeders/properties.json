@@ -1,74 +1,927 @@
 [
     {
-        "id": "1",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 0,
+        "title": "ad ea",
+        "description": "Magna veniam in et adipisicing esse enim dolor eu anim occaecat irure est.",
+        "thumbnailImg": "image0.jpg",
+        "images": "",
+        "owner": "Banks Frazier",
+        "address": "334 Wyona Street, Malo, Washington",
+        "added": "2020-11-19T06:59:40 +06:00",
+        "email": "banksfrazier@futurity.com",
+        "phone": "+1 (960) 536-3102",
+        "features": {
+            "price": "422,172",
+            "totalBedrooms": 5,
+            "totalBathrooms": 2,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                }
+            },
+            "parking": 3
+        }
     },
     {
-        "id": "2",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 1,
+        "title": "nostrud ut",
+        "description": "Nostrud aute duis qui Lorem consectetur ut pariatur nisi.",
+        "thumbnailImg": "image1.jpg",
+        "images": "",
+        "owner": "Barron Contreras",
+        "address": "142 Cooper Street, Baker, American Samoa",
+        "added": "2020-07-29T11:23:06 +05:00",
+        "email": "barroncontreras@futurity.com",
+        "phone": "+1 (932) 569-2953",
+        "features": {
+            "price": "497,640",
+            "totalBedrooms": 3,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                }
+            },
+            "parking": 3
+        }
     },
     {
-        "id": "3",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 2,
+        "title": "eu minim",
+        "description": "Dolore enim Lorem nostrud nostrud.",
+        "thumbnailImg": "image2.jpg",
+        "images": "",
+        "owner": "Mckenzie Sellers",
+        "address": "605 Fillmore Avenue, Franklin, Ohio",
+        "added": "2018-04-28T03:07:16 +05:00",
+        "email": "mckenziesellers@futurity.com",
+        "phone": "+1 (979) 522-2359",
+        "features": {
+            "price": "353,030",
+            "totalBedrooms": 4,
+            "totalBathrooms": 2,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                }
+            },
+            "parking": 2
+        }
     },
     {
-        "id": "4",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 3,
+        "title": "proident aliqua",
+        "description": "Reprehenderit est sint eiusmod laborum sunt nisi dolor exercitation occaecat.",
+        "thumbnailImg": "image3.jpg",
+        "images": "",
+        "owner": "Tamra Vang",
+        "address": "719 Kenmore Court, Olney, Louisiana",
+        "added": "2017-04-25T12:22:28 +05:00",
+        "email": "tamravang@futurity.com",
+        "phone": "+1 (868) 489-2573",
+        "features": {
+            "price": "396,425",
+            "totalBedrooms": 4,
+            "totalBathrooms": 2,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                }
+            },
+            "parking": 2
+        }
     },
     {
-        "id": "5",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 4,
+        "title": "consectetur elit",
+        "description": "Sunt minim nulla velit et deserunt voluptate sint ex irure.",
+        "thumbnailImg": "image4.jpg",
+        "images": "",
+        "owner": "Olson Kinney",
+        "address": "944 Linden Boulevard, Fredericktown, Michigan",
+        "added": "2020-01-28T04:37:29 +06:00",
+        "email": "olsonkinney@futurity.com",
+        "phone": "+1 (928) 562-2186",
+        "features": {
+            "price": "486,720",
+            "totalBedrooms": 5,
+            "totalBathrooms": 2,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                }
+            },
+            "parking": 1
+        }
     },
     {
-        "id": "6",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 5,
+        "title": "ea consectetur",
+        "description": "Minim ipsum incididunt amet ea eu sint consectetur Lorem.",
+        "thumbnailImg": "image5.jpg",
+        "images": "",
+        "owner": "Estella Pugh",
+        "address": "478 Kings Place, Savage, Missouri",
+        "added": "2014-05-22T04:09:11 +05:00",
+        "email": "estellapugh@futurity.com",
+        "phone": "+1 (908) 509-2027",
+        "features": {
+            "price": "370,812",
+            "totalBedrooms": 3,
+            "totalBathrooms": 1,
+            "totalFloors": 3,
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                }
+            },
+            "parking": 1
+        }
     },
     {
-        "id": "7",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 6,
+        "title": "esse labore",
+        "description": "Cupidatat sunt culpa officia esse exercitation veniam.",
+        "thumbnailImg": "image6.jpg",
+        "images": "",
+        "owner": "Jenny Nielsen",
+        "address": "659 Truxton Street, Gorst, Kentucky",
+        "added": "2016-06-06T05:54:29 +05:00",
+        "email": "jennynielsen@futurity.com",
+        "phone": "+1 (899) 568-2126",
+        "features": {
+            "price": "418,645",
+            "totalBedrooms": 4,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                }
+            },
+            "parking": 1
+        }
     },
     {
-        "id": "8",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 7,
+        "title": "consequat ullamco",
+        "description": "Adipisicing culpa eiusmod enim commodo.",
+        "thumbnailImg": "image7.jpg",
+        "images": "",
+        "owner": "Hardin Lott",
+        "address": "137 Bedford Place, Bentonville, Illinois",
+        "added": "2018-01-08T09:47:30 +06:00",
+        "email": "hardinlott@futurity.com",
+        "phone": "+1 (992) 527-3704",
+        "features": {
+            "price": "400,247",
+            "totalBedrooms": 4,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                }
+            },
+            "parking": 3
+        }
     },
     {
-        "id": "9",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 8,
+        "title": "culpa cillum",
+        "description": "Dolore cupidatat veniam dolor velit proident amet id dolore Lorem.",
+        "thumbnailImg": "image8.jpg",
+        "images": "",
+        "owner": "Carson Harris",
+        "address": "340 Campus Place, Goodville, Montana",
+        "added": "2015-11-25T06:02:42 +06:00",
+        "email": "carsonharris@futurity.com",
+        "phone": "+1 (900) 588-3532",
+        "features": {
+            "price": "464,983",
+            "totalBedrooms": 3,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                }
+            },
+            "parking": 3
+        }
     },
     {
-        "id": "10",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 9,
+        "title": "ea reprehenderit",
+        "description": "Ut cupidatat excepteur veniam exercitation magna voluptate commodo magna eu occaecat pariatur magna ullamco.",
+        "thumbnailImg": "image9.jpg",
+        "images": "",
+        "owner": "Hernandez Rocha",
+        "address": "740 Windsor Place, Smeltertown, California",
+        "added": "2016-06-23T08:29:35 +05:00",
+        "email": "hernandezrocha@futurity.com",
+        "phone": "+1 (812) 460-3655",
+        "features": {
+            "price": "407,317",
+            "totalBedrooms": 5,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                }
+            },
+            "parking": 1
+        }
     },
     {
-        "id": "11",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 10,
+        "title": "est sint",
+        "description": "Non quis cillum nostrud labore pariatur incididunt pariatur culpa tempor tempor do reprehenderit ad.",
+        "thumbnailImg": "image10.jpg",
+        "images": "",
+        "owner": "Morgan Tyson",
+        "address": "419 Hewes Street, Smock, Federated States Of Micronesia",
+        "added": "2018-06-02T10:51:27 +05:00",
+        "email": "morgantyson@futurity.com",
+        "phone": "+1 (800) 548-2026",
+        "features": {
+            "price": "468,904",
+            "totalBedrooms": 3,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                }
+            },
+            "parking": 1
+        }
     },
     {
-        "id": "12",
-        "name": "",
-        "title": "",
-        "description": ""
+        "id": 11,
+        "title": "ipsum do",
+        "description": "Veniam enim eiusmod enim anim ullamco tempor voluptate ex.",
+        "thumbnailImg": "image11.jpg",
+        "images": "",
+        "owner": "Mclaughlin Cooper",
+        "address": "893 Navy Walk, Chapin, North Dakota",
+        "added": "2017-05-17T01:52:21 +05:00",
+        "email": "mclaughlincooper@futurity.com",
+        "phone": "+1 (800) 448-3649",
+        "features": {
+            "price": "429,762",
+            "totalBedrooms": 5,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 12,
+        "title": "minim non",
+        "description": "Officia mollit cupidatat sunt laboris magna.",
+        "thumbnailImg": "image12.jpg",
+        "images": "",
+        "owner": "Wolf Vaughan",
+        "address": "802 Strickland Avenue, Gorham, New York",
+        "added": "2014-03-28T12:53:28 +05:00",
+        "email": "wolfvaughan@futurity.com",
+        "phone": "+1 (971) 480-2348",
+        "features": {
+            "price": "463,639",
+            "totalBedrooms": 4,
+            "totalBathrooms": 3,
+            "totalFloors": 3,
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                }
+            },
+            "parking": 1
+        }
+    },
+    {
+        "id": 13,
+        "title": "fugiat veniam",
+        "description": "Magna irure nostrud cillum enim aliqua consequat incididunt consectetur in ullamco quis ipsum laboris ea.",
+        "thumbnailImg": "image13.jpg",
+        "images": "",
+        "owner": "Davidson Ross",
+        "address": "950 Cedar Street, Lowgap, Colorado",
+        "added": "2020-01-24T01:45:30 +06:00",
+        "email": "davidsonross@futurity.com",
+        "phone": "+1 (897) 517-3172",
+        "features": {
+            "price": "490,948",
+            "totalBedrooms": 4,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 2,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                }
+            },
+            "parking": 2
+        }
+    },
+    {
+        "id": 14,
+        "title": "do dolor",
+        "description": "Enim est adipisicing cupidatat velit est sit nisi ex dolor deserunt ex sunt.",
+        "thumbnailImg": "image14.jpg",
+        "images": "",
+        "owner": "Nanette Griffith",
+        "address": "671 Preston Court, Crayne, South Carolina",
+        "added": "2014-06-06T03:23:03 +05:00",
+        "email": "nanettegriffith@futurity.com",
+        "phone": "+1 (804) 566-2132",
+        "features": {
+            "price": "484,308",
+            "totalBedrooms": 3,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 15,
+        "title": "labore qui",
+        "description": "Nulla voluptate pariatur dolore minim sint sunt pariatur labore sunt eiusmod.",
+        "thumbnailImg": "image15.jpg",
+        "images": "",
+        "owner": "Mattie Humphrey",
+        "address": "108 Holt Court, Hiseville, Massachusetts",
+        "added": "2016-04-08T12:13:37 +05:00",
+        "email": "mattiehumphrey@futurity.com",
+        "phone": "+1 (896) 544-2382",
+        "features": {
+            "price": "490,625",
+            "totalBedrooms": 4,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 16,
+        "title": "pariatur ea",
+        "description": "Labore id deserunt nisi fugiat.",
+        "thumbnailImg": "image16.jpg",
+        "images": "",
+        "owner": "Cassie Sawyer",
+        "address": "326 Tillary Street, Navarre, Oklahoma",
+        "added": "2015-04-13T03:51:03 +05:00",
+        "email": "cassiesawyer@futurity.com",
+        "phone": "+1 (961) 414-2841",
+        "features": {
+            "price": "428,661",
+            "totalBedrooms": 3,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                }
+            },
+            "parking": 2
+        }
+    },
+    {
+        "id": 17,
+        "title": "elit do",
+        "description": "Ut nostrud consequat aliqua voluptate.",
+        "thumbnailImg": "image17.jpg",
+        "images": "",
+        "owner": "Frances Ryan",
+        "address": "596 Jerome Street, Camptown, Alaska",
+        "added": "2020-10-11T05:03:57 +05:00",
+        "email": "francesryan@futurity.com",
+        "phone": "+1 (878) 507-3996",
+        "features": {
+            "price": "361,377",
+            "totalBedrooms": 3,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 18,
+        "title": "consequat reprehenderit",
+        "description": "Ipsum nisi nostrud anim id occaecat veniam tempor elit exercitation enim eu.",
+        "thumbnailImg": "image18.jpg",
+        "images": "",
+        "owner": "Freida Cameron",
+        "address": "426 Arlington Avenue, Kohatk, Oregon",
+        "added": "2016-08-06T10:43:17 +05:00",
+        "email": "freidacameron@futurity.com",
+        "phone": "+1 (936) 576-3397",
+        "features": {
+            "price": "388,520",
+            "totalBedrooms": 5,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 19,
+        "title": "sit excepteur",
+        "description": "Culpa est consectetur deserunt amet anim pariatur voluptate.",
+        "thumbnailImg": "image19.jpg",
+        "images": "",
+        "owner": "Gail Sykes",
+        "address": "124 Tehama Street, Lawrence, New Mexico",
+        "added": "2017-12-09T12:00:47 +06:00",
+        "email": "gailsykes@futurity.com",
+        "phone": "+1 (875) 422-2030",
+        "features": {
+            "price": "426,384",
+            "totalBedrooms": 4,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 3
+                }
+            },
+            "parking": 2
+        }
+    },
+    {
+        "id": 20,
+        "title": "proident mollit",
+        "description": "Quis sit fugiat non proident dolor do sunt cupidatat duis sit.",
+        "thumbnailImg": "image20.jpg",
+        "images": "",
+        "owner": "Kaitlin Mcfarland",
+        "address": "113 Bragg Court, Spelter, Pennsylvania",
+        "added": "2014-02-08T01:47:03 +06:00",
+        "email": "kaitlinmcfarland@futurity.com",
+        "phone": "+1 (810) 531-2033",
+        "features": {
+            "price": "466,577",
+            "totalBedrooms": 4,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 1,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 1,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                }
+            },
+            "parking": 2
+        }
+    },
+    {
+        "id": 21,
+        "title": "ex commodo",
+        "description": "Irure consequat fugiat exercitation commodo amet in ipsum elit quis ea reprehenderit officia cillum.",
+        "thumbnailImg": "image21.jpg",
+        "images": "",
+        "owner": "Lindsey Clements",
+        "address": "445 Village Road, Hall, Florida",
+        "added": "2014-06-04T03:42:31 +05:00",
+        "email": "lindseyclements@futurity.com",
+        "phone": "+1 (849) 541-2264",
+        "features": {
+            "price": "422,861",
+            "totalBedrooms": 4,
+            "totalBathrooms": 1,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 3,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                }
+            },
+            "parking": 1
+        }
+    },
+    {
+        "id": 22,
+        "title": "ut deserunt",
+        "description": "Amet aliqua amet quis ipsum fugiat velit velit cillum dolore anim minim adipisicing laborum anim.",
+        "thumbnailImg": "image22.jpg",
+        "images": "",
+        "owner": "Lynn Lawson",
+        "address": "757 Troy Avenue, Layhill, Wisconsin",
+        "added": "2020-12-06T07:23:56 +06:00",
+        "email": "lynnlawson@futurity.com",
+        "phone": "+1 (939) 504-3691",
+        "features": {
+            "price": "390,029",
+            "totalBedrooms": 5,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 3
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 3,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                }
+            },
+            "parking": 3
+        }
+    },
+    {
+        "id": 23,
+        "title": "sunt ullamco",
+        "description": "In ad occaecat minim do nulla sit non est enim Lorem.",
+        "thumbnailImg": "image23.jpg",
+        "images": "",
+        "owner": "Ellis Hester",
+        "address": "923 Woods Place, Bangor, District Of Columbia",
+        "added": "2014-11-13T12:37:45 +06:00",
+        "email": "ellishester@futurity.com",
+        "phone": "+1 (964) 408-3907",
+        "features": {
+            "price": "355,339",
+            "totalBedrooms": 4,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Semi",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "third": {
+                    "bedRooms": 1,
+                    "bathRooms": 2,
+                    "kitchen": 2
+                }
+            },
+            "parking": 2
+        }
+    },
+    {
+        "id": 24,
+        "title": "ea sint",
+        "description": "Qui et occaecat id commodo reprehenderit in laboris voluptate tempor.",
+        "thumbnailImg": "image24.jpg",
+        "images": "",
+        "owner": "Camille Wise",
+        "address": "851 Grove Place, Lisco, Mississippi",
+        "added": "2015-08-01T09:52:54 +05:00",
+        "email": "camillewise@futurity.com",
+        "phone": "+1 (810) 468-3563",
+        "features": {
+            "price": "492,398",
+            "totalBedrooms": 3,
+            "totalBathrooms": 3,
+            "totalFloors": "undefined",
+            "furnished": "Ful",
+            "floorPlans": {
+                "first": {
+                    "bedRooms": 1,
+                    "bathRooms": 3,
+                    "kitchen": 1
+                },
+                "second": {
+                    "bedRooms": 2,
+                    "bathRooms": 1,
+                    "kitchen": 3
+                },
+                "third": {
+                    "bedRooms": 2,
+                    "bathRooms": 3,
+                    "kitchen": 2
+                }
+            },
+            "parking": 1
+        }
     }
 ]

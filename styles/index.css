@@ -90,6 +90,7 @@ code {
 .filter_section_expanded {
   position: absolute;
   top: 100%;
+  /* left: 10%; */
   background: white;
   z-index: 1000;
   padding: 2% 2% 2% 2%;
@@ -100,10 +101,19 @@ code {
 
 .filter-list {
   list-style-type: none;
+  overflow-x: scroll;
+  width: 100%;
 }
 
 .filter-list-item {
   margin: 0 2vh 1vh 0;
+}
+
+.btn-wrap-text {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
 }
 
 .filter-modal{
