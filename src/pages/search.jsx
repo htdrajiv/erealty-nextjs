@@ -23,12 +23,11 @@ function PropertyCards_Deck(props) {
                 <Card.Body>
                     <Card.Img src={`/images/properties/${property.thumbnailImg}`} />
                     <Card.Title>{property.title}</Card.Title>
-                    {/* <ImageLoader classNames="card-img" name={"properties/" + properties[i].thumbnailImg} style={{ height: '100%', width: '100%' }} /> */}
                     <Card.Text>
                         {property.description}
                     </Card.Text>
                     <Card.ImgOverlay>
-                        <span style={{ background: 'white', opacity: '.80' }}>
+                        <span style={{ background: 'white' }}>
                             Price: ${property.features.price} <br />
                             <FontAwesomeIcon icon={faBed} />: {property.features.totalBedrooms} <br />
                             <FontAwesomeIcon icon={faBath} />: {property.features.totalBathrooms}
@@ -36,7 +35,7 @@ function PropertyCards_Deck(props) {
                     </Card.ImgOverlay>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">{property.address}</small>
+                    <small className="text-muted"><b>{property.address}</b></small>
                 </Card.Footer>
                 {/* </Card.ImgOverlay> */}
             </Card>
@@ -95,7 +94,7 @@ function PropertyCards_Row(props) {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <small className="text-muted">{property.address}</small>
+                        <small className="text-muted"><b>{property.address}</b></small>
                     </Card.Footer>
                 </Card>
             </div>
@@ -139,10 +138,10 @@ function PropertyCards(props) {
     return (
         <Fragment>
             <div className="row" style={{ display: "flex", justifyContent: "flex-end" }}>
-                <div className="col-sm-5">
+                <div className="col-sm-8">
                     <SortBy />
                 </div>
-                <div className="col-sm-2">
+                <div className="col-sm-4">
                     <ViewType reload={reload} />
                 </div>
             </div>
@@ -211,7 +210,7 @@ const SortBy = (props) => {
 
 const ViewType = (props) => {
     return (
-        <div >
+        <span>
             <Button variant="info" onClick={() => {
                 localFilters.cardViewType = cardViewType.ROW;
                 props.reload();
@@ -220,7 +219,7 @@ const ViewType = (props) => {
                 localFilters.cardViewType = cardViewType.DECK;
                 props.reload();
             }}> <FontAwesomeIcon icon={faBorderAll} /> </Button>
-        </div>
+        </span>
     )
 }
 

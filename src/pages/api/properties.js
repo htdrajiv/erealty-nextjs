@@ -1,5 +1,5 @@
 // this json file is generated with random values using https://www.json-generator.com/
-import properties from '../../seeders/properties.json'
+import properties from './seeders/properties.json'
 
 export default (req, res) => {
     switch (req.method) {

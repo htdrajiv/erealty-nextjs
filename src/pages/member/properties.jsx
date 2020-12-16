@@ -1,14 +1,25 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import propertySeeder from '../../seeders/properties.json';
 import ImageLoader from "../../components/Misc/ImageLoader";
 import { CardColumns, Card, Carousel, Form, Button } from 'react-bootstrap'
 import axios from 'axios';
-import { faBars, faBorderAll, faBed, faBath } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faBath, faEdit, faTrash, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function PropertyCards_Row(props) {
     let cards = [];
     const { properties } = props;
+
+    let deleteProperty = (propertyId) => {
+
+    }
+
+    let editProperty = (propertyId) => {
+
+    }
+
+    let addImages = () => {
+
+    }
 
     let floorPlans = (floorPlan) => {
         let _floorPlans = [];
@@ -39,8 +50,36 @@ function PropertyCards_Row(props) {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <ImageLoader classNames="card-img" name={"properties/" + property.thumbnailImg}
-                                            style={{ height: '80%', width: '80%' }} />
+                                        <div className="row">
+                                            <div className="col-sm">
+                                                <ImageLoader classNames="card-img" name={"properties/" + property.thumbnailImg}
+                                                    style={{ height: '80%', width: '80%' }} />
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm">
+                                                <Button variant='info' className="right-margin-1"
+                                                    data-toggle="tooltip" data-placement="top" title="Edit"
+                                                    onClick={() => {
+                                                        editProperty(property.id);
+                                                    }}>
+                                                    <FontAwesomeIcon icon={faEdit} />
+                                                </Button>
+                                                <Button variant='danger' className="right-margin-1"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"
+                                                    onClick={() => {
+                                                        deleteProperty(property.id);
+                                                    }}>
+                                                    <FontAwesomeIcon icon={faTrash} />
+                                                </Button>
+                                                <Button variant='success' onClick={() => {
+                                                    addImages(property.id);
+                                                }}>
+                                                    <FontAwesomeIcon icon={faPlusSquare} />Add Images
+                                                </Button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div className="col-sm-6">
                                         Price: ${property.features.price} <br />
@@ -62,6 +101,18 @@ function PropertyCards_Row(props) {
     }
     return (
         <Fragment> {cards} </Fragment>
+    )
+}
+
+function Actions(props) {
+    return (
+        <div className="container top-margin-1" >
+            <div className="row">
+                <div className="col-sm">
+                    <Button variant="success"> <FontAwesomeIcon icon={faPlusSquare} /> Add New Property </Button>
+                </div>
+            </div>
+        </div>
     )
 }
 
@@ -92,11 +143,11 @@ function MyProperty(props) {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-11">
+                <div className="col-sm-9" >
                     <PropertyCards_Row properties={state.properties} />
                 </div>
-                <div className="col-1" style={{ borderLeft: '1px solid grey' }}>
-
+                <div className="col-sm-3" style={{ borderLeft: '1px solid grey' }}>
+                    <Actions />
                 </div>
             </div>
         </div>

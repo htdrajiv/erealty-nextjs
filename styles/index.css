@@ -39,6 +39,14 @@ code {
   border-bottom: 2px solid coral;
 }
 
+.top-margin-1 {
+  margin-top: 1vh;
+}
+
+.botton-margin-1{
+  margin-bottom: 1vh;
+}
+
 .left-margin-1 {
   margin-left: 1vh;
 }

@@ -4,12 +4,14 @@ import ReactMapGL, {
     FullscreenControl, GeolocateControl, Marker, NavigationControl,
     ScaleControl, FlyToInterpolator
 } from 'react-map-gl';
+// import Geocoder from 'react-map-gl-geocoder'
 const Geocoder = dynamic(() => import('react-map-gl-geocoder'), { ssr: false });
+import "mapbox-gl/dist/mapbox-gl.css";
+import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
+
 import { token, styles, mapBoxPlacesApiUrl } from "./config"
 import ImageLoader from "../Misc/ImageLoader";
 
-import "mapbox-gl/dist/mapbox-gl.css";
-import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
