@@ -21,7 +21,7 @@ function PropertyCards_Deck(props) {
             <Card key={i} bg={'light'} border="success" className="mb-3">
                 {/* <Card.ImgOverlay> */}
                 <Card.Body>
-                    <Card.Img src={`/images/properties/${property.thumbnailImg}`} />
+                    <Card.Img src={`/images/properties/${property.id}/${property.thumbnailImg}`} />
                     <Card.Title>{property.title}</Card.Title>
                     <Card.Text>
                         {property.description}
@@ -79,7 +79,7 @@ function PropertyCards_Row(props) {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <ImageLoader classNames="card-img" name={"properties/" + property.thumbnailImg}
+                                        <ImageLoader classNames="card-img" name={"properties/" + property.id + "/" + property.thumbnailImg}
                                             style={{ height: '100%', width: '100%' }} />
                                     </div>
                                     <div className="col-sm-6">

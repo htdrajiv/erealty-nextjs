@@ -25,7 +25,7 @@ function PropertyCards_Row(props) {
         let _floorPlans = [];
         for (const floor in floorPlan) {
             _floorPlans.push(
-                <span>
+                <span key={floor}>
                     {floor}:
                     <FontAwesomeIcon icon={faBed} /> {floorPlan[floor].bedRooms} ,
                     <FontAwesomeIcon icon={faBath} /> {floorPlan[floor].bathRooms} ,
@@ -43,7 +43,7 @@ function PropertyCards_Row(props) {
         let property = properties[i];
         cards.push(
             <div className="bottom-padding-1" key={i} >
-                <Card bg={'light'} border="success" className="bm-3">
+                <Card bg={'light'} border="success" className="bm-3" >
                     <Card.Body>
                         <Card.Title>{property.title}</Card.Title>
                         <Card.Text>
@@ -52,7 +52,7 @@ function PropertyCards_Row(props) {
                                     <div className="col-sm-6">
                                         <div className="row">
                                             <div className="col-sm">
-                                                <ImageLoader classNames="card-img" name={"properties/" + property.thumbnailImg}
+                                                <ImageLoader classNames="card-img" name={"properties/" + property.id + "/" + property.thumbnailImg}
                                                     style={{ height: '80%', width: '80%' }} />
                                             </div>
                                         </div>
@@ -106,7 +106,7 @@ function PropertyCards_Row(props) {
 
 function Actions(props) {
     return (
-        <div className="container top-margin-1" >
+        <div className="container top-margin-1 bottom-margin-1">
             <div className="row">
                 <div className="col-sm">
                     <Button variant="success"> <FontAwesomeIcon icon={faPlusSquare} /> Add New Property </Button>
@@ -141,13 +141,13 @@ function MyProperty(props) {
     }, [])
 
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container-fluid">
+            <div className="row top-margin-1">
+                <div className="col-sm-2 bottom-margin-1">
+                    <Actions />
+                </div>
                 <div className="col-sm-9" >
                     <PropertyCards_Row properties={state.properties} />
-                </div>
-                <div className="col-sm-3" style={{ borderLeft: '1px solid grey' }}>
-                    <Actions />
                 </div>
             </div>
         </div>
