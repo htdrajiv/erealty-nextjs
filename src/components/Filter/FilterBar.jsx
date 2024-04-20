@@ -1,8 +1,55 @@
 import React, { useState } from 'react';
 import { Button, Form, } from 'react-bootstrap'
+import { faBars, faBorderAll } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { cardViewTypes } from '../constants'
 
 const FILTER_TYPES = { "PRICE": "PRICE" }
 const FILTER = { [FILTER_TYPES.PRICE]: { minPrice: "", maxPrice: "" } }
+
+function SortBy(props) {
+    return (
+        <span>
+            <Form>
+                <Form.Group md="4" controlId="carParkingSpaceFormGrp" className={"form-inline"}
+                    style={{ width: "11rem" }}
+                >
+                    <Form.Control as="select"
+                        defaultValue="choose"
+                        onChange={(e) => {
+                            console.log(e.target.value)
+                        }}
+                    >
+                        <option value="choose">SortBy...</option>
+                        <option value="lh">Price(Low-High)</option>
+                        <option value="hl">Price(High-Low)</option>
+                        <option value="re">Recent</option>
+                    </Form.Control>
+                </Form.Group>
+            </Form>
+        </span>
+    )
+}
+
+function ViewTypeRow(props) {
+    return (
+        <span>
+            <Button variant="info" onClick={() => { props.setCardViewType(cardViewTypes.ROW); }}>
+                <FontAwesomeIcon icon={faBars} />
+            </Button>
+        </span>
+    )
+}
+
+function ViewTypeDeck(props) {
+    return (
+        <span>
+            <Button variant="info" onClick={() => { props.setCardViewType(cardViewTypes.DECK); }}>
+                <FontAwesomeIcon icon={faBorderAll} />
+            </Button>
+        </span>
+    )
+}
 
 function PriceFilter(props) {
     const [state, setState] = useState({
@@ -133,6 +180,8 @@ function MoreFilter() {
 }
 
 function FilterBar(props) {
+    const { reloadDisplay } = props;
+
     const [state, setState] = useState({
         priceSection: false, validated: false, saveFilter: false,
         filterSections: ['priceSection', 'typeSection', 'moreSection']
@@ -193,16 +242,25 @@ function FilterBar(props) {
 
                 <li className="filter-list-item">
                     <button className="btn btn-outline-secondary btn-wrap-text" onClick={toggleSection.bind(this, 'typeSection')}>
-                        Property Type
+                        Type
                     </button>
                     {getFilterSection(<TypeFilter />, 'typeSection')}
                 </li>
 
                 <li className="filter-list-item">
                     <button className="btn btn-outline-secondary btn-wrap-text" onClick={toggleSection.bind(this, 'moreSection')}>
-                        More Options
+                        Options
                     </button>
                     {getFilterSection(<MoreFilter />, 'moreSection')}
+                </li>
+                <li className="filter-list-item">
+                    <SortBy />
+                </li>
+                <li className="filter-list-item ">
+                    <ViewTypeRow setCardViewType={props.setCardViewType} />
+                </li>
+                <li className="filter-list-item">
+                    <ViewTypeDeck setCardViewType={props.setCardViewType} />
                 </li>
             </ul>
         </div >

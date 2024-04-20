@@ -1,6 +1,7 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 import { roles } from '../../../components/constants';
+import axios from 'axios';
 
 const options = {
     // Configure one or more authentication providers
@@ -10,14 +11,21 @@ const options = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             params: {
                 grant_type: "authorization_code",
-                redirect_uri: "https://erealty-nextjs.vercel.app/api/auth/callback/google",
+                // redirect_uri: "https://erealty-nextjs.vercel.app/api/auth/callback/google",
             },
         })
-        // ...add more providers here
     ],
+    pages: {
+        signIn: '/auth/login',
+        signOut: '/auth/signout',
+        error: '/auth/error', // Error code passed in query string as ?error=
+        verifyRequest: '/auth/verifyRequest', // (used for check email message)
+        newUser: null // If set, new users will be directed here on first sign in
+    },
     callbacks: {
         signIn: async (user, account, profile) => {
             return Promise.resolve(true)
+
         },
         redirect: async (url, baseUrl) => {
             return Promise.resolve(baseUrl)
@@ -45,7 +53,14 @@ const options = {
     },
 
     // A database is optional, but required to persist accounts in a database
-    database: process.env.DATABASE_URL,
+    database: {
+        type: 'mysql',
+        host: '127.0.0.1',
+        port: 3306,
+        username: 'root',
+        password: 'root@123',
+        database: 'erealty'
+    }
 }
 
 export default (req, res) => NextAuth(req, res, options)

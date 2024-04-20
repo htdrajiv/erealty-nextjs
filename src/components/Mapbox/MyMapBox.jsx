@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import ReactMapGL, {
     FullscreenControl, GeolocateControl, Marker, NavigationControl,
-    ScaleControl, FlyToInterpolator
+    ScaleControl, FlyToInterpolator, WebMercatorViewport
 } from 'react-map-gl';
 // import Geocoder from 'react-map-gl-geocoder'
 const Geocoder = dynamic(() => import('react-map-gl-geocoder'), { ssr: false });
@@ -11,21 +11,24 @@ import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 
 import { token, styles, mapBoxPlacesApiUrl } from "./config"
 import ImageLoader from "../Misc/ImageLoader";
-
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import { faRupeeSign, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import axios from 'axios';
+// import { Button } from 'bootstrap';
 
 const mapTypes = {
     satellite: "satellite",
     light: "light",
-    basic: "basic"
+    basic: "basic",
+    outdoor: "outdoor"
 }
 
 const geolocateStyle = {
     position: 'absolute',
-    top: 50,
+    top: 65,
     right: 10,
     padding: '5px'
 };
@@ -53,19 +56,37 @@ const scaleControlStyle = {
 
 const customButtonsStyle = {
     position: 'absolute',
-    top: 100,
+    top: 105,
     right: 5,
     padding: '5px'
 }
 
-function MyMapBox(props, query) {
+function Markers(props) {
+    const { data } = props;
+    if (typeof data === "undefined" || Object.keys(data).length === 0) return <div></div>
+    let markers = [];
+    for (let d in data) {
+        let property = data[d];
+        markers.push(
+            <Marker key={property.id} longitude={property.address.longitude} latitude={property.address.latitude} offsetLeft={-20} offsetTop={-20}>
+                <h3 className="marker-icon" style={{ color: 'green' }} onClick={() => { console.log("clicked") }}><FontAwesomeIcon icon={faMapMarkerAlt} /></h3>
+            </Marker >
+        )
+    }
+
+    return markers;
+}
+
+
+function MyMapBox(props) {
+    const { properties } = props;
     const router = useRouter();
     const [state, setState] = useState({
         viewport: {},
         userLocation: {},
         searchResultLayer: {},
         geocoderSearchCoordinates: {},
-        mapStyle: styles.basic,
+        mapStyle: styles.outdoor,
         searchLocation: "",
         autoGeolocateControl: false
     })
@@ -78,14 +99,37 @@ function MyMapBox(props, query) {
         }
     }, [router])
 
-
-
     let onViewportChange = viewport => {
         setState({
             ...state,
             viewport: viewport
         });
     };
+
+    useEffect(() => {
+        const timeOutId = setTimeout(() => setBoundingCoordinates(), 2000);
+        return () => clearTimeout(timeOutId);
+    }, [state.viewport]);
+
+    let setBoundingCoordinates = () => {
+        const bounds = new WebMercatorViewport(state.viewport).getBounds();
+        setState({
+            ...state,
+            boundingCoordinates: bounds
+        });
+    }
+
+    useEffect(() => {
+        const timeOutId = setTimeout(() => Object.keys(properties).length > 0 && filterPropertiesByViewPort(), 1500)
+    }, [state.boundingCoordinates])
+
+    let filterPropertiesByViewPort = () => {
+        console.log(state.boundingCoordinates)
+        let _properties = properties.filter(property => {
+            return true;
+        });
+        props.onViewportChange(_properties);
+    }
 
     let onGeocoderResult = (result) => {
         setState({
@@ -130,7 +174,7 @@ function MyMapBox(props, query) {
                         let viewport = {
                             longitude: features["center"][0],
                             latitude: features["center"][1],
-                            zoom: 15,
+                            zoom: 12,
                             transitionDuration: 2000,
                             transitionInterpolator: new FlyToInterpolator(),
                         };
@@ -185,6 +229,7 @@ function MyMapBox(props, query) {
     let satelliteActive = mapStyle === styles[mapTypes.satellite] ? `active` : '';
     let basicActive = mapStyle === styles[mapTypes.basic] ? `active` : '';
     let lightActive = mapStyle === styles[mapTypes.light] ? `active` : '';
+    let outdoorActive = mapStyle === styles[mapTypes.outdoor] ? `active` : '';
     let GeocoderSearchMarker = getGeocoderSearchMarker();
     if (mapRef !== null && typeof mapRef !== undefined) {
         return (
@@ -197,7 +242,12 @@ function MyMapBox(props, query) {
                     mapStyle={mapStyle}
                     mapboxApiAccessToken={token}
                     onViewportChange={onViewportChange}
+                    onDblClick={(event) => {
+                        event.srcEvent.preventDefault();
+                        event.srcEvent.stopPropagation();
+                    }}
                 >
+                    <Markers data={properties} />
                     <GeolocateControl
                         style={geolocateStyle}
                         positionOptions={{ enableHighAccuracy: true }}
@@ -214,7 +264,7 @@ function MyMapBox(props, query) {
                         mapboxApiAccessToken={token}
                         trackProximity={true}
                     />
-                    {GeocoderSearchMarker}
+                    {/* {GeocoderSearchMarker} */}
                     <div style={fullscreenControlStyle}>
                         <FullscreenControl />
                     </div>
@@ -224,15 +274,16 @@ function MyMapBox(props, query) {
                     <div style={scaleControlStyle}>
                         <ScaleControl />
                     </div>
-                    <div style={customButtonsStyle}>
+                    {/* <div style={customButtonsStyle}>
                         <DropdownButton id="dropdown-basic-button" title="Map"
                             variant="secondary"
                             onSelect={onMapTypeChange}>
                             <Dropdown.Item eventKey={mapTypes.satellite} className={satelliteActive} >Satellite</Dropdown.Item>
                             <Dropdown.Item eventKey={mapTypes.light} className={lightActive} >Light</Dropdown.Item>
                             <Dropdown.Item eventKey={mapTypes.basic} className={basicActive} >Basic</Dropdown.Item>
+                            <Dropdown.Item eventKey={mapTypes.outdoor} className={outdoorActive} >OutDoor</Dropdown.Item>
                         </DropdownButton>
-                    </div>
+                    </div> */}
                 </ReactMapGL>
             </div>
         );

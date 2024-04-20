@@ -98,7 +98,7 @@ function Header(props) {
             {scrolled && <div id="fillStickyScrolledArea" className={""} style={{ height: "7vh", width: "5vh" }} />}
             <nav className={"navbar navbar-expand-lg navbar-dark bg- rounded " + scrolledClass}>
                 <a className="navbar-brand" href="/">
-                    <ImageLoader name='logo1.png' alt='E-Realty' style={{ height: "4vh", width: "5vh" }} />
+                    <ImageLoader name='logo1.png' alt='E-Realty' style={{ height: "4vh", width: "5vh" }} /><b>घर भाडा</b>
                 </a>
                 <ul className="navbar-nav">
                     {headers["leftHeaders"]}

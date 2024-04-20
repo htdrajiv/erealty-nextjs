@@ -1,13 +1,13 @@
 import React from 'react';
 
-const LoadImage = (imageName, alt, style, classNames) => {
-    return <img className={classNames} src={`/images/${imageName}`} style={style} alt={alt} />;
+const LoadImage = (baseUrl, imageName, alt, style, classNames) => {
+    return <img className={classNames} src={`${baseUrl ? baseUrl : '/images'}/${imageName}`} style={style} alt={alt} />;
 }
 
 function ImageLoader(props) {
-    const { name, style, alt, classNames } = props;
+    const { baseUrl, name, style, alt, classNames } = props;
     return (
-        LoadImage(name, alt, style, classNames)
+        LoadImage(baseUrl, name, alt, style, classNames)
     )
 }
 

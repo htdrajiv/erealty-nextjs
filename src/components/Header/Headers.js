@@ -21,7 +21,7 @@ const HeaderJson = [
     "index": 2,
     "to": "/member/properties",
     "name": "properties",
-    "text": "Properties",
+    "text": "My Properties",
     "position": "left",
     "className": "nav-item left-padding-1 right-padding-1",
     "roles": [
@@ -47,7 +47,7 @@ const HeaderJson = [
   },
   {
     "index": 4,
-    "to": "/login",
+    "to": "/auth/login",
     "name": "login",
     "text": "Login",
     "position": "right",
@@ -61,7 +61,7 @@ const HeaderJson = [
   },
   {
     "index": 5,
-    "to": "/signUp",
+    "to": "/auth/signUp",
     "name": "signUp",
     "text": "Sign Up",
     "position": "right",

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Spinner } from 'react-bootstrap';
 import Icons from './Icons.js'
-import ImageLoader from '../ImageLoader.jsx'
+import ImageLoader from '../Misc/ImageLoader.jsx'
 
 const plot_types = { scattermapbox: "scattermapbox" };
 const plot_modes = { markers: "markers", text: "text" };

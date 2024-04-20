@@ -6,7 +6,7 @@ export let styles = {
     "light": "mapbox://styles/mapbox/light-v9",
     "dark": "mapbox://styles/mapbox/dark-v9",
     "basic": "mapbox://styles/mapbox/basic-v9",
-    "outdoor": "mapbox://styles/mapbox/outdoors-v10",
+    "outdoor": "mapbox://styles/htdrajiv/ckkaj0rm3049517n9govmec5p",
     "satellite": "mapbox://styles/mapbox/satellite-v9"
 }
 
